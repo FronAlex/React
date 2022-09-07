@@ -1,7 +1,8 @@
 import React from 'react';
-import './Profile.css';
+import Post_1 from '../Post/Post_1';
+import './MyPost.css';
 
-const Profile = () => {
+const MyPost = () => {
     return <div className='content'>
         <div>
             <img src="https://klike.net/uploads/posts/2019-06/1561526578_1.jpg" className="img_1"></img>
@@ -13,15 +14,12 @@ const Profile = () => {
                 <h1>Alexander REACKT</h1>
             </div>
         </div>
+        <Post_1 />
+        <Post_1 />
+        <Post_1 />
 
-        <div>My pfoto
 
-        </div>
-
-        <div>coment</div>
-        <div className="item">post</div>
-        <div className="item">post_1</div>
     </div>
 };
 
-export default Profile;
+export default MyPost;
