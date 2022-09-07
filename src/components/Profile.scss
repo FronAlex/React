@@ -1,0 +1,26 @@
+.content {
+    grid-area: c;
+    background-color: cornflowerblue;
+    .img_1 {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .my {
+        display: flex;
+
+        margin-top: 20px;
+
+        .my_img {
+            border: solid 1px black;
+        }
+
+        .my_h1 {
+            margin-left: 50px;
+        }
+    }
+
+    .item {
+        color: aqua;
+    }
+}

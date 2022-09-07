@@ -1,0 +1,31 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+body a,
+body a:visited {
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  width: 1200px;
+  -ms-grid-rows: 60px 1fr;
+      grid-template-rows: 60px 1fr;
+  -ms-grid-columns: 2fr 10fr;
+      grid-template-columns: 2fr 10fr;
+      grid-template-areas: "h h" "n c";
+  grid-gap: 10px;
+}
+/*# sourceMappingURL=App.css.map */

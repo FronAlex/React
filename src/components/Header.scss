@@ -1,0 +1,9 @@
+.header {
+    grid-area: h;
+    background-color: green;
+    .try {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+    }
+}
