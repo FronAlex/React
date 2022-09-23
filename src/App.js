@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/Nav';
 import Profile from './components/Profile/MyPost/MyPost';
+import Dialogs from './components/Dialogs/Dialogs';
 
 
 
@@ -17,8 +18,11 @@ const App = () => {
 
       <Header />
       <NavBar />
-      <Profile />
 
+      <div className='wrapper_content'>
+        <Profile />
+        {/* <Dialogs /> */}
+      </div>
 
 
 

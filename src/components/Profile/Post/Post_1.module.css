@@ -1,0 +1,9 @@
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img {
+  width: 50px;
+}

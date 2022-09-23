@@ -3,10 +3,9 @@
   background-color: green;
 }
 
-.header .try {
+.img {
   width: 60px;
   height: 60px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-/*# sourceMappingURL=Header.css.map */

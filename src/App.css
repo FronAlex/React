@@ -25,7 +25,12 @@ body a:hover {
       grid-template-rows: 60px 1fr;
   -ms-grid-columns: 2fr 10fr;
       grid-template-columns: 2fr 10fr;
-      grid-template-areas: "h h" "n c";
+      grid-template-areas: "h h"
+ "n c";
   grid-gap: 10px;
+}
+.wrapper_content{
+  grid-area: c;
+  background-color: cornflowerblue;
 }
 /*# sourceMappingURL=App.css.map */
