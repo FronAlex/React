@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import nav from './Nav.module.css';
 
 const NavBar = () => {
     return <nav className={nav.nav}>
         <div className={nav.item}>
-            < a>Profile</a>
+            < Link to='/Profile'>Profile</Link>
         </div>
         <div className={nav.item}>
-            < a>Messages</a>
+            < Link to='/Dialogs'>Messages</Link>
         </div>
         <div className={nav.item}>
-            < a>News</a>
+            < Link to='/News'>News</Link>
         </div>
         <div className={nav.item}>
-            < a>Settings</a>
+            < Link to='/Settings'>Settings</Link >
         </div>
 
     </nav>
