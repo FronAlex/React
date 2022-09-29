@@ -4,6 +4,18 @@
 }
 
 .item {
-  color: white;
+  
   font-size: 18px;
+}
+.item a{
+  text-decoration: none;
+  color: white;
+}
+
+a.activeLink{
+  color: gold;
+  
+} 
+a.t{
+  color:blue
 }
