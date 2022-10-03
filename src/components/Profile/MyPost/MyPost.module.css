@@ -1,25 +1,16 @@
 
-.content .img_1 {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
 
-.content .my {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 20px;
-}
-
-.content .my .my_img {
-  border: solid 1px black;
-}
-
-.content .my .my_h1 {
-  margin-left: 50px;
-}
 
 .content .item {
   color: aqua;
+}
+
+.content .text{
+display: block;
+  
+}
+
+.buttom{
+  background-color: blueviolet;
+  margin: 10px 0 20px 10px;
 }

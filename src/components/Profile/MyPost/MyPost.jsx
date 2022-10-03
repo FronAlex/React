@@ -1,25 +1,30 @@
 import React from 'react';
 import Post_1 from '../Post/Post_1';
 import myPost from './MyPost.module.css';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const MyPost = () => {
 
+    let postData = [
+        { id: 1, message: 'Hi, how are you?', likesCount: 12 },
+        { id: 2, message: 'It, my first post?', likesCount: 50 },
+
+
+    ]
+
+
+
     return <div className={myPost.content}>
-        <div>
-            <img src="https://klike.net/uploads/posts/2019-06/1561526578_1.jpg" className={myPost.img_1}></img>
+        <ProfileInfo />
+        <div >
+            <textarea className={myPost.text} name="" id="" cols="30" rows="5"></textarea>
+            <button className={myPost.buttom} >Add Post</button>
         </div>
 
-        <div className={myPost.my}>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlJWM0IQV2k6GAcBlLgEdiEhiOLVKWtdrAgyhQPMlVFdC18apn_yfoa6peRpHqLhJ-fKw&usqp=CAU" className={myPost.my_img}></img>
-            <div className={myPost.my_h1}>
-                <h1>Alexander REACT</h1>
-            </div>
-        </div>
-        <input type="text"></input>
-        <Post_1 message='Hi, how are you?' num='5' />
-        <Post_1 message='It, my first post?' num='50' />
+        <Post_1 message={postData[0].message} likesCount={postData[0].likesCount} />
+        <Post_1 message={postData[1].message} likesCount={postData[1].likesCount} />
 
-
+        <div></div>
 
     </div>
 };
