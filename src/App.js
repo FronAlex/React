@@ -13,7 +13,10 @@ import { Routes, Route } from "react-router-dom";
 
 
 
-const App = () => {
+const App = (props) => {
+
+
+
   return (
 
     <div className='wrapper'>
@@ -24,10 +27,12 @@ const App = () => {
       <div className='wrapper_content'>
 
         <Routes>
-          <Route path='/profile' element={<Profile />} />;
-          <Route path='/dialogs' element={<Dialogs />} />;
+          <Route path='/profile' element={<Profile post={props.post} />} />;
+          <Route path='/dialogs' element={<Dialogs props={props.props} message={props.message} />} />;
           <Route path='/settings' element={<Settings />} />;
-          <Route path='*' element={<Dialogs />} />;
+          <Route path='*' element={<Dialogs props={props.props} message={props.message} />} />;
+
+
         </Routes>
       </div>
 

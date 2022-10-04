@@ -1,0 +1,18 @@
+
+
+.dialogsItems {
+    padding: 10px;
+ 
+ }
+
+ .dialogsItems .active {
+    color:gold
+ }
+
+ .link{
+    color: white;
+ }
+
+ .dialog{
+    padding-left: 10px;
+ }
