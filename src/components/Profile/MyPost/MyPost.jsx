@@ -5,15 +5,25 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const MyPost = (props) => {
 
+    let newPostElement = React.createRef();
+
+    let addPosts = () => {
+        props.addPost();
+    }
+
+    let postsElements = props.post.postData.map(p => <Post_1 message={p.message} likesCount={p.likesCount} />)
 
 
-    let postsElements = props.post.map(p => <Post_1 message={p.message} likesCount={p.likesCount} />)
+    let onPostChange = () => {
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    }
 
     return <div className={myPost.content}>
         <ProfileInfo />
         <div >
-            <textarea className={myPost.text} name="" id="" cols="30" rows="5"></textarea>
-            <button className={myPost.buttom} >Add Post</button>
+            <textarea onChange={onPostChange} className={myPost.text} ref={newPostElement} value={props.post.newPostText} cols="30" rows="5" />
+            <button className={myPost.buttom} onClick={addPosts} >Add Post</button>
         </div>
 
         {postsElements}
