@@ -4,10 +4,10 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/Nav';
-import Profile from './components/Profile/MyPost/MyPost';
-import Dialogs from './components/Dialogs/Dialogs';
+import Profile from './components/Profile/MyPost/MyPostContainer';
 import Settings from './components/Settings/Settings';
 import { Routes, Route } from "react-router-dom";
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 
 const App = (props) => {
 
@@ -17,10 +17,10 @@ const App = (props) => {
       <NavBar />
       <div className='wrapper_content'>
         <Routes>
-          <Route path='/profile' element={<Profile post={props.store.profilePage} dispatch={props.dispatch} />} />;
-          <Route path='/dialogs' element={<Dialogs store={props.store} />} />;
+          <Route path='/profile' element={<Profile />} />;
+          <Route path='/dialogs' element={<DialogsContainer />} />;
           <Route path='/settings' element={<Settings />} />;
-          <Route path='*' element={<Dialogs store={props.store} />} />;
+          <Route path='*' element={<DialogsContainer />} />;
         </Routes>
       </div>
 
@@ -30,3 +30,6 @@ const App = (props) => {
 
 
 export default App;
+
+
+/* post={props.store.getState().profilePage} dispatch={props.dispatch} */
