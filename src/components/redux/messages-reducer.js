@@ -24,7 +24,7 @@ let initialState = {
     newMessageBody: ''
 }
 
-const messageReducer = (state = initialState, action) => {
+/* const messageReducer = (state = initialState, action) => {
 
 
     if (action.type === UPDATE_NEW_MESSAGE_BODY) {
@@ -39,6 +39,32 @@ const messageReducer = (state = initialState, action) => {
     }
 
     return state;
+}; */
+
+const messageReducer = (state = initialState, action) => {
+
+
+    switch (action.type) {
+        case UPDATE_NEW_MESSAGE_BODY:
+            return {
+                ...state,
+                newMessageBody: action.body
+            };
+
+
+        case SEND_MESSAGE:
+
+            let body = state.newMessageBody;
+            return {
+                ...state,
+
+                messageData: [...state.messageData, { id: 6, message: body }],
+                newMessageBody: '',
+            };
+
+        default:
+            return state;
+    }
 };
 
 

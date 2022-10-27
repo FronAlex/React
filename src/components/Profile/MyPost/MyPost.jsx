@@ -17,19 +17,21 @@ const MyPost = (props) => {
     }
 
 
-    let postsElements = props.posts.map(p => <Post_1 message={p.message} likesCount={p.likesCount} />)
+    let postsElements = props.posts.map(p => <Post_1 message={p.message} key={p.id} likesCount={p.likesCount} />)
+    let newPostText = props.newPostText;
 
 
     let onAddPostChange = () => {
         let text = newPostElement.current.value;
         props.updateNewPostText(text);
 
+
     }
 
     return <div className={myPost.content}>
         <ProfileInfo />
         <div >
-            <textarea onChange={onAddPostChange} className={myPost.text} ref={newPostElement} value={props.posts.newPostText} cols="30" rows="5" />
+            <textarea onChange={onAddPostChange} className={myPost.text} ref={newPostElement} value={newPostText} cols="30" rows="5" />
             <button className={myPost.buttom} onClick={onAddPosts} >Add Post</button>
         </div>
 

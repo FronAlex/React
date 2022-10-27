@@ -8,6 +8,8 @@ import Profile from './components/Profile/MyPost/MyPostContainer';
 import Settings from './components/Settings/Settings';
 import { Routes, Route } from "react-router-dom";
 import DialogsContainer from './components/Dialogs/DialogsContainer';
+import UsersContainer from './components/Users/UsersContainer';
+
 
 const App = (props) => {
 
@@ -20,6 +22,7 @@ const App = (props) => {
           <Route path='/profile' element={<Profile />} />;
           <Route path='/dialogs' element={<DialogsContainer />} />;
           <Route path='/settings' element={<Settings />} />;
+          <Route path='/users' element={<UsersContainer />} />;
           <Route path='*' element={<DialogsContainer />} />;
         </Routes>
       </div>
@@ -32,4 +35,3 @@ const App = (props) => {
 export default App;
 
 
-/* post={props.store.getState().profilePage} dispatch={props.dispatch} */
